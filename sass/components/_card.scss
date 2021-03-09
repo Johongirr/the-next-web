@@ -1,0 +1,40 @@
+.card {
+    @media(max-width: 800px) {
+        display: flex;
+       
+    }
+    &__text-box {
+        @media(max-width: 800px) {
+            margin-left: 1rem;
+        }
+    }
+    &__img {
+       
+        @media(max-width: 800px) {
+            width: 7rem;
+            height:4rem;
+        }
+    }
+    &__news-link {
+        color: $black;
+       
+        font-size: .9rem;
+
+        &:hover {
+            color: $coquelicot;
+            text-decoration: underline;
+        }
+    }
+    &__list {
+        display: flex;
+        margin-top: .5rem;
+        font-size: .8rem;
+    
+    }
+    &__link {
+        margin-right: .8rem;
+    }
+    :is(&__link, &__item) {
+        color: $medium-grey;
+    }
+}

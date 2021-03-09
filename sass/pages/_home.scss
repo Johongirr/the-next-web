@@ -1,0 +1,519 @@
+.page {
+
+        :is(&__latest-news, &__funds, &__sections, &__deals, &__footer) {
+            margin-top: 4.2rem;
+        }
+}
+.main {
+
+    &__cover {
+        margin: .4rem .6rem;
+    }
+}
+.nav-header {
+
+    :is(.top-nav, .bottom-nav, &__text-box) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &__row {
+        display: flex;
+    }
+    &__logo-box {
+        width: 6rem;
+        display: flex;
+        align-items: center;
+        background-color: #131313;  
+        display: none; 
+        @media(max-width: 1000px){
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__logo-link {
+        display: flex;
+        justify-content: center;
+    }
+    &__logo {
+        width: 95%;
+        @media(max-width: 750px){
+            width: 60%;
+        }
+    }
+    &__nav-box {
+        flex: 1;
+    }
+    .top-nav {
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        background-color: #222;
+        
+        @media(max-width: 800px){
+            &__list-right {
+                display: none;
+            }
+        }
+        @media(max-width: 750px) {
+            display: none;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                padding-right: 1rem;
+            }
+        }
+        &__link {
+            &:link,
+            &:visited {
+                color: $light-grey;
+                font-size: .75rem;
+                transition: $tranisition-gen;
+                
+                &:hover {
+                    color: $white;
+                }
+            }
+           
+        }
+    }
+    .bottom-nav {
+
+        @media(max-width: 750px) {
+            &__list {
+                display: none;
+            }
+        }
+        &__item {
+            &:not(:last-child) {
+                padding-right: 1rem;
+            }
+            @media(max-width: 1200px) {
+                &:nth-child(7){
+                    display: none;
+                }
+                &:nth-child(6) {
+                    display: none;
+                }
+            }
+        }
+        &__link {
+            &:link,
+            &:visited {
+                color: $medium-grey;
+                font-size: .8rem;
+                padding: .8rem 0;
+                text-transform: uppercase;
+                transition: $tranisition-gen;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+        &__right {
+           display: flex;
+           align-items: center;
+        }
+        &__hamburger-menu {
+            margin-left: 1rem;
+        }
+        &__search {
+            &:link,
+            &:visited {
+                padding: .8rem 0;
+                border-left: 1px solid rgba($medium-grey, .8);
+                color: $medium-grey;
+                padding-left: 1rem;
+                transition: $tranisition-gen;
+                
+                &:hover {
+                    color: $dark-grey;
+                }
+                
+            }
+            &-icon {
+                transform: rotate(90deg);
+            }
+
+        }
+    }
+    &__text-box {
+        background-color: #fd3;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        font-size: .77rem;
+        
+        @media(max-width: 1000px){
+            padding-left: 7rem;
+        }
+        @media(max-width: 750px) {
+            padding: 1.2rem 0;
+            text-align: center;
+        }
+    }
+    &__link {
+        display: block;
+        color: $dark-grey;
+    }
+}
+
+.cover {
+
+     
+    &__article {
+        padding: 1.2rem;
+        background-blend-mode: multiply;
+        background:  linear-gradient(to right bottom, red, brown),
+                     url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/surface-laptop-3-480x270.jpg") no-repeat;
+        background-size: cover;
+    
+        &-main-top {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-img-box {
+            width: clamp(15rem, calc(25vw + 5rem), 30rem);
+            @media(max-width: 1000px){
+                display: none;
+            }
+        }
+        &-date {
+            display: block;
+            text-align: right;
+            color: $white;
+            @media(max-width: 1000px) {
+                display: none;
+            }
+        }
+        &-heading-5 {
+            color: $white;
+        }
+        
+        
+        &-list {
+            margin-top: 1rem;
+            display: flex;
+            font-size: .8rem;
+
+        }
+        &-item {
+            color: $medium-grey;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+        &-link {
+            color: $medium-grey;
+        }
+
+        // main article
+        &-main {
+
+            &-title {
+                font-weight: 900;
+                font-size: clamp(1.2rem, calc(3vw + 1rem), 2.9rem);
+                color: $white;
+                line-height: 1;
+                 
+            }
+        }
+
+
+        // side article
+        &-aside {
+
+            &-title {
+                font-weight: 900;
+                font-size: clamp(1.2rem, calc(5vw + 2rem), 1.5rem);
+                color: $white;
+                line-height: 1;
+            }
+        }
+    }  
+}
+
+
+.latest-news {
+    
+     
+    &__link {
+        color: $coquelicot;
+        transition: $tranisition-gen;
+        &:hover {
+            color: $black; 
+        }
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+    &__icon {
+        display: inline-block;
+        margin-left: .4rem;
+    }
+}
+
+.funds {
+
+        @media(max-width: 1000px) {
+            &__detail-last {
+                display: none;
+            }
+        }
+
+        &__text-box {
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.7rem;
+            @media(max-width: 1000px) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        &__title-link {
+            color: $coquelicot;
+            transition: $tranisition-gen;
+            &:hover {
+                color: $black;
+            }
+        }
+        &__icon {
+            display: inline-block;
+            margin-left: .3rem;
+        }
+        &__list  {
+            display: flex;
+            &-item {    
+                padding: 0 1rem;
+                border-right: 1px solid $coquelicot;
+                &:last-child {
+                    border-right: none;
+                }  
+                @media(max-width: 1000px) {
+                    border: none;
+                    padding: 0;
+                    margin-bottom: .5rem;
+                }
+
+
+        }
+        @media(max-width: 1000px) {
+            flex-direction: column;
+            margin-top: 1rem;
+             
+        }
+            &-link {
+                &:link,
+                &:visited {
+                    color: $coquelicot;
+                    transition: $tranisition-gen;
+                    font-size: .9rem;
+                    &:hover {
+                        color: $black;
+                    }             
+                }
+            }
+        }
+        &__detail {
+            position: relative;
+            background-color: rgba($coquelicot, .04);
+        }
+        &__investor-link {
+            display: block;
+        }
+        &__investor-logo-box {
+            position: absolute;
+            top: 1rem;
+            left: .5rem;
+        }
+        &__investor-logo {
+            max-width: 4rem;
+        }
+       
+        &__investor-name {
+            background-color: $coquelicot;
+            padding: 1rem 0;
+           
+            color: $white;
+            font-weight: 700;
+        }
+        &__investor-fund-amount-box {
+            background-color: rgba($coquelicot, .2);
+            padding: .7rem 0;
+        }
+        &__investor-fund-amount {
+            font-size: 1.1rem;
+            color: $black
+        }
+        &__investor-series-label {
+            color: $dark-grey;
+            font-weight: 400;
+            font-size: .96rem;
+            
+        }
+        :is(&__investor-name, &__investor-fund-amount-box){
+            padding-left: 5rem;
+        }
+        :is(&__card, &__footer){
+            padding: 1rem .5rem;
+        }
+        &__card {
+            border-bottom: 1px solid $coquelicot;
+        }
+        &__link {
+            font-size: .8rem;
+            color: $dark-grey;
+
+            &:not(:last-child) {
+                margin-bottom: .6rem;
+            }
+        }
+        &__icon {
+            display: inline-block;
+            margin-right: .4rem;
+        }
+        &__footer {
+            font-size: .7rem;
+        }
+        &__detail-link {
+            color: $dark-grey;
+        }
+        &__text {
+            color: $medium-grey;
+        }
+}
+
+.sections {
+
+    .hard-work {
+
+        &__header {
+            margin-bottom: 1rem;
+        }
+        &__article-link {
+            color: $coquelicot;
+        }
+        &__icon {
+            font-size: 1.2rem;
+        }
+        &__img-box {
+            background-blend-mode: multiply;
+            background:  linear-gradient(transparent 10%, $black),
+                         url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2021/03/Wallstreetbets-hed-368x276.jpg") no-repeat;
+            background-size: cover;
+            height: 16rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+        :is(&__heading-5, &__heading-3) {
+            color: $white;
+        }
+        &__heading-5 {
+            font-size: .85rem;
+            font-weight: 500;
+        }
+        &__heading-3 {
+            font-size: 1.1rem;
+        }
+        &__list {
+            margin-top: .5rem;
+            display: flex;
+        }
+        &__link {
+            &:link,
+            &:visited {
+                display: inline-block;
+                color: $light-grey;
+                font-size: .84rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+}
+
+.deals {
+
+    &__text-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+    &__title-link {
+        color: $coquelicot;
+    }
+    &__link--red {
+        color: $coquelicot;
+    }
+    &__card {
+        position: relative;
+    }
+    &__card-text-box {
+        margin-top: .7rem;
+    }
+    &__price-box {
+        margin-top: .4rem;
+    }
+    &__erased-price {
+        text-decoration: line-through;
+        font-size: .85rem;
+        color: $medium-grey;
+    }   
+    &__discount-price {
+        font-size: 1.1rem;
+        color: $dark-grey;
+    }
+     
+}
+
+.footer {
+    background-color: #000;
+
+    &__header {  
+        padding: 3rem 0;
+        background-color: #131313;
+    }
+    &__header-text-box {
+        max-width: 560px;
+        margin: 0 auto; 
+    }
+    &__social {
+        margin-bottom: 1.8rem;
+    }
+    &__copyright-box {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2.2rem 0;
+        
+    }
+    &__copyright {
+        font-size: .9rem;
+        
+        color: $medium-grey;
+    }
+    &__img {
+        width: 3rem;
+    }
+    &__img-box--top {
+        margin-right: 1rem;
+    }
+    &__img-box--bottom {
+        margin-left: 1rem;
+        img[alt="footer stackpage img"] {
+            width: 5rem;
+        }
+    }
+
+    
+}

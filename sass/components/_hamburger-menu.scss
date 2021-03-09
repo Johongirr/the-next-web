@@ -1,0 +1,28 @@
+.hamburger-menu {
+    position: relative;
+    cursor: pointer;
+    display: none;
+    @media(max-width: 750px) {
+        display: block;
+    }
+    &,
+    &::before,
+    &::after {
+        width: 2rem;
+        height: 2.5px;
+        background-color: $coquelicot;
+        
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+    }
+    &::before {
+        top: -.5rem;
+    }
+    &::after {
+        top: .5rem;
+    }
+}

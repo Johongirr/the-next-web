@@ -1,0 +1,63 @@
+.section-list {
+
+    &__article {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        background-color: rgba($coquelicot, .06);
+    }
+    :is(&__heading-5, &__heading-4){
+        color: $coquelicot;
+    }
+    &__header {
+        padding-left: 1rem;
+    }
+    &__heading-5 {
+        font-weight: 500;
+        font-size: .8rem;
+    }
+    &__heading-4 {
+        font-size: .9rem;
+    }
+    &__img-box {
+        width: 9rem;
+        align-self: stretch;
+    }
+    &__img-link {
+        display: block;
+        height: 100%;
+    }
+    &__img {
+        height: 100%;    
+    }
+    &__item {
+       
+         
+        &:not(:first-child) {
+            position: relative;
+
+            display: flex;
+            font-size: .7rem;
+            padding: .7rem 0;
+            border-bottom: 1px solid rgba($dark-grey, .1);
+             
+            &::before {
+                content: "\2022";
+                color: red;
+                display: block;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+    &__link {
+        color: $black;
+        transition: $tranisition-gen;
+        padding-left: .5rem;
+        &:hover {
+            color: $dark-grey;
+        }
+    }
+
+}

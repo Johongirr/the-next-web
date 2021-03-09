@@ -1,0 +1,35 @@
+.cover {
+    display: grid;
+    gap: .3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(14rem, auto);
+    grid-template-areas: 
+    "main-article main-article aside-article-1"
+    "main-article main-article aside-article-2";
+    @media(max-width: 800px){
+            grid-template-areas: 
+            "main-article main-article main-article"
+            "aside-article-1 aside-article-1 aside-article-1"
+            "aside-article-2 aside-article-2 aside-article-2";
+        
+    }
+
+    &__article-main {
+        grid-area: main-article;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__article-aside-1 {
+        grid-area: aside-article-1;
+    }
+    &__article-aside-2 {
+        grid-area: aside-article-2;
+    }
+    :is(&__article-aside-1, &__article-aside-2){
+        display: flex;
+        align-items: flex-end;
+    }
+
+    
+}

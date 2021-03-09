@@ -1,0 +1,26 @@
+.social {
+    display: flex;
+    justify-content: center;
+    &__item {
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &__link {
+        width: 2.6rem;
+        height: 2.6rem;
+        
+        @include absCenter;
+
+        background-color: $dark-grey;
+        color: $white;
+        border: 1px solid $dark-grey;
+        border-radius: 50%;
+        transition: $tranisition-gen;
+        
+        &:hover {
+            background-color: $black;
+        }
+        
+    }
+}
